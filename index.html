@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Agency (Vite + AlpineJS + TS)</title>
+  </head>
+  <body x-data>
+    <header class="h-[50vh] bg-slate-400">
+      <div class="container mx-auto py-6">
+        <h1
+          x-text="$store.agency.name"
+          class="font-bold text-center text-white text-3xl"
+        ></h1>
+      </div>
+    </header>
+    <div>
+      <div class="container mx-auto py-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <template x-for="country in $store.agency.featuredCountries">
+            <div class="bg-white rounded-lg shadow-lg p-6">
+              <h2 class="text-xl font-bold mb-2" x-text="country.name"></h2>
+              <p class="text-gray-700 text-base" x-text="country.content"></p>
+            </div>
+          </template>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
