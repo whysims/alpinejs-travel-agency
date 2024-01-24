@@ -1,4 +1,5 @@
-// vite.config.js
-export default {
-  base: "/alpinejs-travel-agency/"
-}
+import { defineConfig } from 'vite'
+
+export default defineConfig({
+    base: "/alpinejs-travel-agency/",
+})
